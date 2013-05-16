@@ -57,3 +57,24 @@ How many people? > 200
 How much did it cost? > 950
 You should probably tip $190.0!
 """
+print('perhaps i can help you calculate the tip?')
+
+people = int(raw_input('how many people are there\n'))
+cost = float(raw_input('how much did it cost?\n'))
+tip = 0
+if people >= 6:
+    tip = .20 * cost
+    print('you should probably tip $' + str(tip))
+if people < 6:
+    service = raw_input('how was the service?')  
+    if service == 'terrible':
+        tip = 0
+    if service == 'poor':
+        tip = .10 * cost
+    if service == 'ok':
+        tip = .15 * cost
+    if service == 'good':
+        tip = .20 * cost
+    if service == 'great':
+        tip = .25 * cost
+print('you should probably tip $' + str(tip))
